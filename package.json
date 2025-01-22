@@ -8,7 +8,8 @@
     "work:css": "npx tailwindcss -i ./src/tailwind.css -o ./dist/styles.css --watch",
     "build:css": "npx tailwindcss -i ./src/tailwind.css -o ./dist/styles.css",
     "build:html": "xcopy /Y /I /D src\\*.html dist\\",
-    "build": "npm run clean && npm run build:css && npm run build:html"
+    "build": "npm run clean && npm run build:css && npm run build:html",
+    "start": "npm run build && npx serve ./dist"
   },
   "keywords": [],
   "author": "",
