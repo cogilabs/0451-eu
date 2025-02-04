@@ -2,7 +2,7 @@
 title: "Konami Code"
 type: "game"
 description: "⬆️⬆️⬇️⬇️⬅️➡️⬅️➡️BA - The most famous cheat code in gaming history"
-image: "/assets/images/konamiCode.jpg"
+image: "/assets/images/konamiCode.png"
 tags:
   - Game
   - Code
