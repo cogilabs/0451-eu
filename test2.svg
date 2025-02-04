@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+    <!-- Abstract circuit pattern background -->
+    <path d="M0 60h30l10-10h20l10 10h20l10-10h20l10 10h30" 
+          fill="none" stroke="#3B82F6" stroke-width="2" opacity="0.3"/>
+    
+    <!-- Hidden maze pattern -->
+    <path d="M380 60c0-20-20-20-20-40s20-20 20-40M360 60c0-20 20-20 20-40" 
+          fill="none" stroke="#1E40AF" stroke-width="2" opacity="0.2"/>
+    
+    <!-- Main logo elements -->
+    <g transform="translate(80, 0)">
+        <!-- Binary dots background -->
+        <circle cx="120" cy="60" r="50" fill="none" stroke="#3B82F6" 
+                stroke-width="1" stroke-dasharray="1 4"/>
+        
+        <!-- Stylized 0451 -->
+        <g fill="#1E40AF" font-family="'Courier New', monospace" font-weight="bold">
+            <text x="40" y="75" font-size="65" class="glow">04</text>
+            <text x="140" y="75" font-size="65" class="glow">51</text>
+        </g>
+        
+        <!-- Abstract key symbol -->
+        <path d="M230 60a10 10 0 1 1-20 0 10 10 0 0 1 20 0z M220 60h30" 
+              fill="none" stroke="#3B82F6" stroke-width="4"/>
+    </g>
+    
+    <!-- Style for text glow effect -->
+    <defs>
+        <style>
+            .glow { filter: drop-shadow(0 0 2px #3B82F6); }
+        </style>
+    </defs>
+</svg>

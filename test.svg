@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+    <!-- Background key shape -->
+    <path d="M340 60a15 15 0 0 1-15 15h-30v25h-10V45h40a15 15 0 0 1 15 15zm-15 5a5 5 0 1 0 0-10 5 5 0 0 0 0 10z" 
+          fill="#3B82F6" opacity="0.2"/>
+    
+    <!-- Main text "0451" -->
+    <g fill="#1E40AF" font-family="monospace" font-weight="bold">
+        <!-- Hidden dots pattern -->
+        <circle cx="50" cy="60" r="40" fill="none" stroke="#3B82F6" stroke-width="4" stroke-dasharray="4 6"/>
+        
+        <!-- Numbers with slight tech styling -->
+        <text x="30" y="75" font-size="60">0</text>
+        <text x="90" y="75" font-size="60">4</text>
+        <text x="150" y="75" font-size="60">5</text>
+        <text x="210" y="75" font-size="60">1</text>
+        
+        <!-- Decorative elements -->
+        <rect x="270" y="30" width="4" height="60" rx="2"/>
+        <rect x="280" y="45" width="4" height="30" rx="2"/>
+        <rect x="290" y="50" width="4" height="20" rx="2"/>
+    </g>
+</svg>
