@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0451.eu - Easter Eggs</title>
+  <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+  <link href="./output.css" rel="stylesheet">
+  <%
+    const loremIpsum1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."; 
+    const loremIpsum2 = loremIpsum1.replace(".", ",") + " sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+    const loremIpsum3 = loremIpsum2 + " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+    const loremIpsum4 = loremIpsum3 + " Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
+    const loremIpsum5 = loremIpsum4 + " Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+  %>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const scrollContainers = document.querySelectorAll('.scroll-drag');
+      
+      scrollContainers.forEach(container => {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        container.addEventListener('mousedown', (e) => {
+          isDown = true;
+          container.style.cursor = 'grabbing';
+          startX = e.pageX - container.offsetLeft;
+          scrollLeft = container.scrollLeft;
+        });
+
+        container.addEventListener('mouseleave', () => {
+          isDown = false;
+          container.style.cursor = 'grab';
+        });
+
+        container.addEventListener('mouseup', () => {
+          isDown = false;
+          container.style.cursor = 'grab';
+        });
+
+        container.addEventListener('mousemove', (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - container.offsetLeft;
+          const walk = (x - startX) * 2;
+          container.scrollLeft = scrollLeft - walk;
+        });
+      });
+    });
+  </script>
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen m-0">
+  <header class="bg-blue-500 text-white p-4">
+    <h1 class="text-2xl font-bold">0451.eu - Easter Eggs Archive</h1>
+    <nav class="flex space-x-4">
+      <a href="/" class="hover:text-blue-300">Home</a>
+      <a href="/about" class="hover:text-blue-300">About</a>
+    </nav>
+  </header>
+  <main class="p-6 flex-1 flex flex-col">
+    <p class="pb-6"><%= loremIpsum5 %></p>
+    <div class="grid grid-cols-5 gap-4 flex-1">
+      <div class="col-span-1 bg-gray-200 p-4">Menu</div>
+      <div class="col-span-4 bg-gray-300 p-4 flex flex-wrap justify-around gap-4">
+        <!-- Card Component -->
+        <% cards.forEach(card => { %>
+          <div class="card max-w-sm rounded-xl overflow-hidden shadow-lg bg-white p-4 h-52 relative transform transition-transform duration-200 hover:scale-105">
+            <div class="pl-4">
+              <h2 class="font-bold text-3xl mb-2"><%= card.title %></h2>
+              <p class="text-gray-700 text-base max-w-[50%]">
+                <%= card.description %>
+              </p>
+            </div>
+            <div class="absolute top-0 right-0 w-8 h-[calc(100%-40px)] flex items-center justify-center text-black text-lg font-semibold <%= card.type === 'game' ? 'bg-amber-300' : 'bg-red-400' %>" style="writing-mode: vertical-rl;">
+              <%= card.type === 'game' ? 'Game Easter egg' : 'Movie Easter egg' %>
+            </div>
+            <div class="absolute bottom-0 left-0 w-full h-10 bg-slate-200 flex items-center pl-2 pr-2 justify-between">
+              <div class="flex-1 overflow-x-auto hide-scrollbar mr-2 scroll-drag cursor-grab no-select" style="mask-image: linear-gradient(to right, black 90%, transparent 100%);">
+                <div class="flex space-x-2 w-max pr-8">
+                  <% card.tags.forEach(tag => { %>
+                    <span class="px-2 py-0.5 whitespace-nowrap text-xs text-center font-semibold text-black rounded-full border bg-<%= tag.color %> bg-opacity-40 border-<%= tag.color %>">
+                      <%= tag.name %>
+                    </span>
+                  <% }); %>
+                </div>
+              </div>
+              <a href="/details/<%= card.slug %>" class="flex-shrink-0 flex items-center px-3 py-0.5 pr-0.5 text-sm font-medium text-black bg-gray-400 rounded-full hover:bg-gray-300">
+                Learn more &nbsp;
+                <span class="px-1 py-1 rounded-full border bg-opacity-70 bg-stone-500 border-hidden">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+            <div class="absolute bottom-12 right-10 w-28 h-28 rounded-full overflow-hidden">
+              <img src="<%= card.image %>" alt="<%= card.title %> image" class="w-full h-full object-cover">
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-gray-800 text-white p-4 text-center">
+    <p>&copy; 2025 <a href="https://Cogilabs.eu/" class="hover:text-blue-300">Cogilabs.eu</a></p>
+  </footer>
+</body>
+</html>
