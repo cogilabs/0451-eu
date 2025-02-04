@@ -12,6 +12,8 @@ tags:
 ---
 # The Konami Code: Gaming's Universal Password
 
+***Warning: This page is a placeholder and is not yet complete.***
+
 ## Origins
 First introduced in 1986's Gradius for the NES, the Konami Code (⬆️⬆️⬇️⬇️⬅️➡️⬅️➡️ B A) was created by Kazuhisa Hashimoto as a way to make the game easier during testing. He forgot to remove it before release, and it became gaming history.
 

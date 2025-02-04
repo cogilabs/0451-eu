@@ -11,6 +11,8 @@ tags:
 ---
 # The Pizza Planet Truck
 
+***Warning: This page is a placeholder and is not yet complete.***
+
 ## Origins
 First appearing in Toy Story (1995) as the delivery vehicle for Pizza Planet restaurant, this yellow Toyota Hilux pickup truck has become one of Pixar's most recognizable Easter eggs.
 

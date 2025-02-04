@@ -14,6 +14,8 @@ tags:
 
 # The Wilhelm Scream
 
+***Warning: This page is a placeholder and is not yet complete.***
+
 ## Origins
 The Wilhelm scream was first recorded for the 1951 film "Distant Drums". The sound effect got its name from Private Wilhelm, a character in the 1953 film "The Charge at Feather River", who lets out the famous scream when shot with an arrow.
 
