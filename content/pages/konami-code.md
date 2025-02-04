@@ -1,7 +1,7 @@
 ---
 title: "Konami Code"
 type: "game"
-description: "⬆️⬆️⬇️⬇️⬅️➡️⬅️➡️BA - The most famous cheat code in gaming history"
+description: "The most famous cheat code in gaming history."
 image: "/assets/images/konamiCode.png"
 tags:
   - Game
@@ -27,7 +27,7 @@ Up, Up, Down, Down, Left, Right, Left, Right, B, A
 - **BioShock Infinite** - Unlocks 1999 Mode
 - **Websites** - Many sites have hidden features activated by the code
 
-![Konami Code Input](/assets/images/konami-code-input.jpg)
+![Konami Code Input](/assets/images/konamiCode.png)
 
 ## Cultural Impact
 The code has transcended gaming to become a cultural phenomenon, appearing in:

@@ -1,7 +1,7 @@
 ---
 title: "Wilhelm Scream"
 type: "movie"
-description: "The famous sound effect used in countless movies since 1951"
+description: "The famous sound effect used in countless movies since 1951."
 image: "/assets/images/wilhelmScream.png"
 tags:
   - Movie
