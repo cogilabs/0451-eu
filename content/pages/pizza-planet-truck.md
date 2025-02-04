@@ -2,7 +2,7 @@
 title: "Pizza Planet Truck"
 type: "movie"
 description: "The yellow pickup truck that appears in every Pixar movie."
-image: "/assets/images/pptruckImage.png"
+image: "/assets/images/pptruckUpscaled.png"
 tags:
   - Movie
   - Object
