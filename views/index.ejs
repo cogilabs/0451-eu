@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>0451.eu - Easter Eggs</title>
   <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+  <script src="/js/easter-eggs.js"></script>
   <link href="./output.css" rel="stylesheet">
   <%
     const loremIpsum1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."; 
@@ -46,22 +47,6 @@
           const walk = (x - startX) * 2;
           container.scrollLeft = scrollLeft - walk;
         });
-      });
-
-      // Konami Code detector
-      const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
-      let konamiIndex = 0;
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === konamiCode[konamiIndex]) {
-          konamiIndex++;
-          if (konamiIndex === konamiCode.length) {
-            konamiIndex = 0;
-            window.location.href = '/secret';
-          }
-        } else {
-          konamiIndex = 0;
-        }
       });
     });
   </script>

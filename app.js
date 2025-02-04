@@ -27,6 +27,9 @@ app.use(express.static('/home/cp1749670p06/public_html/0451.eu'));
 // Serve static files in the src directory (for output.css)
 app.use(express.static(path.join(__dirname, 'src')));
 
+// Serve static files in the public directory
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Add this function to read all markdown files
 function getAllPages() {
   const pagesDir = path.join(__dirname, 'content', 'pages');

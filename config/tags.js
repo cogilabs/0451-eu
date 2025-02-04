@@ -13,6 +13,7 @@ const tags = {
   "Adventure": { color: "emerald-600" },
   "Strategy": { color: "orange-600" },
   "Horror": { color: "stone-800" },
+  "Game": { color: "emerald-500" },
   
   // New media-related tags
   "Animation": { color: "pink-500" },
