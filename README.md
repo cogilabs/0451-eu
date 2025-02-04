@@ -36,4 +36,4 @@ This project is built using **TailwindCSS** for a sleek and responsive design. T
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.  
 
-<p align="center">🔍 Press ⬆️⬆️⬇️⬇️⬅️➡️⬅️➡️ or visit <a href="https://0451.eu">0451.eu</a> to uncover all the secrets! 🔎</p>
+<p align="center">🔍 Press ⬆️⬆️⬇️⬇️⬅️➡️⬅️➡️<code style="color: DeepSkyBlue">B</code><code style="color: DeepSkyBlue">A</code> or visit <a href="https://0451.eu">0451.eu</a> to uncover all the secrets! 🔎</p>

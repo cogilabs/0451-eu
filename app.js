@@ -111,6 +111,12 @@ app.get('/details/:title', (req, res) => {
   }
 });
 
+app.get('/secret', (req, res) => {
+  res.render('secret', {
+    message: "You found the secret page! 🎮"
+  });
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
