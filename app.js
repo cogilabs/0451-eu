@@ -120,6 +120,17 @@ app.get('/secret', (req, res) => {
   });
 });
 
+// Update the filter route with api prefix
+app.get('/api/filter', (req, res) => {
+  const type = req.query.type;
+  const cards = getAllPages();
+  const filteredCards = type 
+    ? cards.filter(card => card.type === type)
+    : cards;
+
+  res.render('partials/cards', { cards: filteredCards });
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

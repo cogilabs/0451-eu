@@ -1,0 +1,35 @@
+<% cards.forEach(card => { %>
+  <div class="card w-96 rounded-xl overflow-hidden flex-none shadow-lg bg-white p-4 h-52 relative transform transition-transform duration-200 hover:scale-105">
+    <div class="pl-4">
+      <h2 class="font-bold text-3xl mb-2"><%= card.title %></h2>
+      <p class="text-gray-700 text-base max-w-[50%]">
+        <%= card.description %>
+      </p>
+    </div>
+    <div class="absolute top-0 right-0 w-8 h-[calc(100%-40px)] flex items-center justify-center text-black text-lg font-semibold <%= card.type === 'game' ? 'bg-amber-300' : 'bg-red-400' %>" style="writing-mode: vertical-rl;">
+      <%= card.type === 'game' ? 'Game Easter egg' : 'Movie Easter egg' %>
+    </div>
+    <div class="absolute bottom-0 left-0 w-full h-10 bg-slate-200 flex items-center pl-2 pr-2 justify-between">
+      <div class="flex-1 overflow-x-auto hide-scrollbar mr-2 scroll-drag cursor-grab no-select" style="mask-image: linear-gradient(to right, black 90%, transparent 100%);">
+        <div class="flex space-x-2 w-max pr-8">
+          <% card.tags.forEach(tag => { %>
+            <span class="px-2 py-0.5 whitespace-nowrap text-xs text-center font-semibold text-black rounded-full border bg-<%= tag.color %> bg-opacity-40 border-<%= tag.color %>">
+              <%= tag.name %>
+            </span>
+          <% }); %>
+        </div>
+      </div>
+      <a href="/details/<%= card.slug %>" class="flex-shrink-0 flex items-center px-3 py-0.5 pr-0.5 text-sm font-medium text-black bg-gray-400 rounded-full hover:bg-gray-300">
+        Learn more &nbsp;
+        <span class="px-1 py-1 rounded-full border bg-opacity-70 bg-stone-500 border-hidden">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </span>
+      </a>
+    </div>
+    <div class="absolute bottom-12 right-10 w-28 h-28 rounded-full overflow-hidden">
+      <img src="<%= card.image %>" alt="<%= card.title %> image" class="w-full h-full object-cover">
+    </div>
+  </div>
+<% }); %>
