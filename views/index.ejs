@@ -14,42 +14,6 @@
     const loremIpsum4 = loremIpsum3 + " Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
     const loremIpsum5 = loremIpsum4 + " Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
   %>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const scrollContainers = document.querySelectorAll('.scroll-drag');
-      
-      scrollContainers.forEach(container => {
-        let isDown = false;
-        let startX;
-        let scrollLeft;
-
-        container.addEventListener('mousedown', (e) => {
-          isDown = true;
-          container.style.cursor = 'grabbing';
-          startX = e.pageX - container.offsetLeft;
-          scrollLeft = container.scrollLeft;
-        });
-
-        container.addEventListener('mouseleave', () => {
-          isDown = false;
-          container.style.cursor = 'grab';
-        });
-
-        container.addEventListener('mouseup', () => {
-          isDown = false;
-          container.style.cursor = 'grab';
-        });
-
-        container.addEventListener('mousemove', (e) => {
-          if (!isDown) return;
-          e.preventDefault();
-          const x = e.pageX - container.offsetLeft;
-          const walk = (x - startX) * 2;
-          container.scrollLeft = scrollLeft - walk;
-        });
-      });
-    });
-  </script>
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen m-0">
   <header class="bg-blue-500 text-white p-4">
